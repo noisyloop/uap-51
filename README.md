@@ -26,11 +26,12 @@ Then open `http://localhost:5173` in your browser.
 - **Autonomous Flight Mode** — Watch the UAP evade lasers using real PID control algorithms
 - **Manual Control Mode** — Take the controls yourself and navigate the neon city
 - **5 Hostile Aliens** — Full alien bodies riding neon hover-pods, with tracking lasers that predict your movement
-- **Cyberpunk City** — 60 buildings with lit window facades, neon edges, rooftop antennas and blinking beacons
-- **Cinematic Night Sky** — 5000 twinkling stars, a haloed moon, and drifting nebula clouds
+- **Night City** — a street-grid city of setback towers with physically based facades (lit interiors, reflective glass), neon signage, rooftop masts and blinking aircraft beacons
+- **Wet Streets** — asphalt roads with lane markings, puddles that mirror the city glow, and sodium street lamps
+- **Cinematic Night Sky** — light-polluted horizon haze, atmospheric fog, stars and a haloed moon
 - **Real-time Telemetry** — Altitude, velocity, evasion count, PID visualization
 - **Detailed Saucer** — Metallic lathed hull, glass dome, plasma core, chasing rim lights, tractor-beam under-glow, and velocity-based banking
-- **Bloom Post-Processing** — HDR bloom + ACES filmic tone mapping makes every neon surface genuinely glow
+- **Post-Processing** — multisampled HDR rendering, bloom, ACES filmic tone mapping, vignette and film grain
 
 ---
 

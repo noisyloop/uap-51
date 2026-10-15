@@ -187,7 +187,7 @@ export function createUAP(scene) {
   uap.halo = halo;
 
   // Main point light illuminating nearby buildings and ground
-  const light = new THREE.PointLight(COLORS.UAP_CORE, 4, 40);
+  const light = new THREE.PointLight(COLORS.UAP_CORE, 120, 45, 1.7);
   uap.add(light);
   uap.light = light;
 
