@@ -55,7 +55,7 @@ export function updateVisuals(uap, buildings, isBoosting, time, velocity, env) {
   uap.underGlow.material.opacity = 0.12 + Math.sin(time * 9) * 0.04 + (isBoosting ? 0.1 : 0);
 
   // Light intensity variation
-  uap.light.intensity = 3 + Math.sin(time * 5);
+  uap.light.intensity = 120 * (1 + Math.sin(time * 5) * 0.25) * (isBoosting ? 1.4 : 1);
 
   // Color based on boost state
   if (isBoosting) {

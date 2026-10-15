@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { PIDController } from '../utils/PIDController';
 import { GAME_CONFIG } from '../utils/constants';
-import { createScene, createCamera, createRenderer, createComposer, applyEnvironment, createGround, createStars } from './SceneSetup';
+import { createScene, createSky, createCamera, createRenderer, createComposer, applyEnvironment, createGround, createStars, createGlowTexture } from './SceneSetup';
 import { createBuildings } from './BuildingFactory';
 import { createUAP } from './UAPFactory';
 import { createAliens } from './AlienFactory';
@@ -83,9 +83,13 @@ export class GameEngine {
     applyEnvironment(this.renderer, this.scene);
 
     // Build the world
+    createSky(this.scene);
     createGround(this.scene);
     this.env = createStars(this.scene);
-    this.buildings = createBuildings(this.scene);
+    this.buildings = createBuildings(
+      this.scene,
+      createGlowTexture('rgba(255,255,255,0.9)', 'rgba(255,255,255,0.25)')
+    );
     this.uap = createUAP(this.scene);
     this.aliens = createAliens(this.scene);
 
@@ -239,6 +243,7 @@ export class GameEngine {
     }
 
     updateVisuals(this.uap, this.buildings, this.isBoosting, time, this.uapVelocity, this.env);
+    this.composer.film.uniforms.time.value = time;
     this.composer.render();
   };
 

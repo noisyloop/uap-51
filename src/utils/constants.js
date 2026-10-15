@@ -32,8 +32,9 @@ export const GAME_CONFIG = {
     z: 60
   },
   
-  // Building settings
-  BUILDING_COUNT: 60,
+  // City settings (street grid: one block + one street = 20 units)
+  BLOCK_SIZE: 14,
+  STREET_WIDTH: 6,
   BUILDING_MIN_RADIUS: 30,
   BUILDING_MAX_RADIUS: 110,
   
@@ -69,7 +70,10 @@ export const COLORS = {
   LASER: 0x00ff00,
   
   // Environment
-  FOG: 0x000005,
+  FOG: 0x1b1726,          // hazy horizon, matches the sky's lowest band
+  SKY_ZENITH: 0x01020a,
+  SKY_MID: 0x080b1e,
+  SKY_GLOW: 0x2a160e,     // sodium light pollution on low haze
   GROUND: 0x000208,
   GRID: 0x00ffff
 };
